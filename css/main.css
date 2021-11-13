@@ -1,6 +1,7 @@
-*,
-*::before,
-*::after {
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -11,48 +12,110 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #F7CD75;
 }
 
-.wrapper {
-    display: flex;
+img {
+    vertical-align: middle;
 }
 
+/* WRAPPER */
+
+.wrapper {
+    display: flex;
+    width: 800px;
+}
+
+/* WRAP-LEFT */
+
 .wrap-left {
-    padding: 40px 40px 0px 40px;
-    width: 350px;
+    padding: 40px;
+    width: 300px;
     height: 450px;
-    overflow: scroll;
+    overflow: auto;
     background-color: #F2F2F2;
+}
+
+.wrap-left::-webkit-scrollbar {
+    width: 8px;
+}
+
+.wrap-left::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: gray;
 }
 
 .wrap-left-top {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
-.wrap-left::-webkit-scrollbar { width: 0; height: 0 };
+.wrap-left-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
 
-.wrap-left-top-header {
+.wrap-card {
+    padding: 65px 0px 10px 10px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    background: no-repeat 10px 15px;
+    background-size: 60px 35px;
+    background-color: #fff;
+    border: 1px solid #c6cfd6;
+    transition: 0.3s ease-in;
+}
+
+.wrap-card:hover {
+    box-shadow: 0px 0px 0px 2px #919CC9;
+}
+
+.activ {
+    box-shadow: 0px 0px 0px 2px #919CC9;
+}
+
+.wrap-card:last-child {
     margin: 0;
 }
 
-.wrap-left-card {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #fff;
+.visa {
+    background-image: url("../img/visa.svg");
 }
 
-.wrap-left-card:hover {
-
+.mastercard {
+    background-image: url("../img/mastercard.svg");
 }
+
+.maestro {
+    background-image: url("../img/maestro.svg");
+}
+
+.wrap-card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #626b74;
+}
+
+.wrap-ping {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.wrap-left-desc {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* WRAP-RIGHT */
 
 .wrap-right {
-    padding: 40px 40px 0 40px;
-    width: 550px;
+    width: 500px;
     height: 450px;
-    background-color: rgb(189, 182, 182);
+    background-color: #fff;
 }
