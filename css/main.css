@@ -1,6 +1,6 @@
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -20,11 +20,23 @@ img {
     vertical-align: middle;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
 /* WRAPPER */
 
 .wrapper {
     display: flex;
     width: 800px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 /* WRAP-LEFT */
@@ -115,7 +127,105 @@ img {
 /* WRAP-RIGHT */
 
 .wrap-right {
+    padding: 40px 40px 0px 40px;
     width: 500px;
     height: 450px;
+    border-radius: 0px 5px 5px 0px;
     background-color: #fff;
+    overflow: auto;
+}
+
+.wrap-right::-webkit-scrollbar {
+    width: 8px;
+}
+
+.wrap-right::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: gray;
+}
+
+.wrap-right-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.wrap-right-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.wrap-right-desc {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.line {
+    margin: 0;
+    margin-bottom: 40px;
+    height: 1px;
+    border: none;
+    background-color: #c6cfd6;
+}
+
+/* WRAP-COSTS-LIST */
+
+.wrap-costs-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.costs-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 38px;
+}
+
+.costs-item::before {
+    display: inline-block;
+    margin-right: 25px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #c6cfd6;
+    background-image: url("../img/minus.svg");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.costs-item-plus::before {
+    background-image: url("../img/plus.svg");
+}
+
+.costs-item-title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.costs-item-desc {
+    margin: 0;
+    font-size: 13.6px;
+    font-weight: 500;
+    color: #B8B8B8;
+}
+
+.costs-item-right {
+    display: inline-block;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 900;
+    color: #8999C6;
+}
+
+.costs-item-right-col {
+    color: #8ECF64;
 }
