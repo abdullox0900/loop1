@@ -5,8 +5,54 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: #F7CD75;
 }
 
+.wrapper {
+    display: flex;
+}
+
+.wrap-left {
+    padding: 40px 40px 0px 40px;
+    width: 350px;
+    height: 450px;
+    overflow: scroll;
+    background-color: #F2F2F2;
+}
+
+.wrap-left-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.wrap-left::-webkit-scrollbar { width: 0; height: 0 };
+
+.wrap-left-top-header {
+    margin: 0;
+}
+
+.wrap-left-card {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.wrap-left-card:hover {
+
+}
+
+.wrap-right {
+    padding: 40px 40px 0 40px;
+    width: 550px;
+    height: 450px;
+    background-color: rgb(189, 182, 182);
+}
